@@ -1,6 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import { ChartDataSets } from 'chart.js';
+import { Label } from 'ng2-charts';
+
+export interface DataSource {
+  data1: number[];
+  data2: number[];
+}
 
 @Component({
   selector: 'app-chart',
@@ -10,30 +15,43 @@ import { Color, Label } from 'ng2-charts';
 export class ChartComponent {
 
   @Input()
-  public chartData: ChartDataSets[];
+  set data(ds: DataSource) {
 
-  public chartLabels: Label[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    this.chartData = [{
+        data: ds.data1,
+        backgroundColor: 'rgb(113, 72, 237)',
+        ...this.dataRowConfig
+      }, {
+        data: ds.data2,
+        backgroundColor: 'rgba(180, 180, 200, 0.1)',
+        ...this.dataRowConfig
+      }
+    ]
 
-  public chartOptions: any = {
+    this.chartLabels = new Array(ds.data1.length); 
+  }
+
+  chartData: ChartDataSets[];
+  chartLabels: Label[] = [];
+  
+  chartOptions: any = {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      xAxes: [ { 
-        gridLines: { 
-          display: false
-        },
-        stacked : true,
-      } ],
-      yAxes: [ { 
-        gridLines: { 
-          display: false 
-        },
-        stacked : true,
+      xAxes: [ {
         display: false,
+        stacked: true
+      }],
+      yAxes: [ { 
+        display: false,
+        stacked: true
       }]
     }
   };
 
-  public chartLegend = false;
-  public chartType = 'bar';
+  dataRowConfig = {
+    borderWidth: 0, 
+    type: 'bar',
+    barPercentage: 0.85
+  }
 }

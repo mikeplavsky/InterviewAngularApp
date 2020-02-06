@@ -6,21 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  public data = [
-    { 
-      data: [65, 59, 80, 81, 56, 55, 40, 81, 56, 55, 40, 99], 
-      borderWidth : 1, 
-      type : 'bar',
-      backgroundColor: 'rgba(33, 150, 243 , 0.9)',
-      borderColor: 'rgba(33, 150, 243 , 1)',
-    },
-    { 
-      data: [81, 56, 55, 40, 65, 59, 80, 40, 65, 59, 99, 99 ],
-      type : 'bar',
-      backgroundColor: 'rgba( 243, 121, 0 , 0.9)',
-      borderColor: 'rgba( 243, 121, 0 , 1)',
-      borderWidth : 1
-    },
-  ];
+
+  data = { 
+    data1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,14,17,20,12,13,17,19,13, 0, 0, 0, 0, 0, 0],
+    data2: [17,14,17,21,-3,-2,17,17,20,17, 0, 0, 0, 0, 0, 0, 0, 0,17,-2,-3,21,17,13] 
+  };
+
 }
