@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #714BEC;
+    --accent-color: #714BEC;
+    --graytext-color: #C0B9D2;
+    --borders-color: #DCDCDC;
+    --background-color: #f3f3f7;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    color: var(--accent-color);
+}
