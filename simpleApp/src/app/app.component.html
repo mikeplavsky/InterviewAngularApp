@@ -1,8 +1,22 @@
 
-  <!-- Chart Example -->
+<div class="dashboard">
 
-  <div style="width:575px; height:200px">
-    <app-chart [data]="data">
+  <h1 class="dashboard-title">Accounts Analisys</h1>
+  <h2 class="dashboard-subtitle">Febuary 2020</h2>
+
+
+  <!-- CHART EXAMPLE -->
+
+  <div style="width:600px; height:200px">
+    <app-chart [data]="
+    { 
+      account1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,14,17,20,12,13,17,19,13, 0, 0, 0, 0, 0, 0],
+      account2: [17,14,17,21,-3,-2,17,17,20,17, 0, 0, 0, 0, 0, 0, 0, 0,17,-2,-3,21,17,13] 
+    }
+    ">
     </app-chart>
   </div>
-  
+
+  <!-- END: CHART EXAMPLE -->
+    
+</div>
