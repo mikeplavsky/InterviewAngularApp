@@ -17,22 +17,25 @@ export class ChartComponent {
   @Input()
   set data(ds: DataSource) {
 
-    this.chartData = [{
-        data: ds.account1,
-        backgroundColor: 'rgb(113, 72, 237)',
-        ...this.dataRowConfig
-      }, {
-        data: ds.account2,
-        backgroundColor: 'rgba(180, 180, 200, 0.1)',
-        ...this.dataRowConfig
-      }
-    ]
+    if (ds && ds.account1 && ds.account2) {
 
-    this.chartLabels = new Array(ds.account1.length); 
+      this.chartData = [{
+          data: ds.account1,
+          backgroundColor: 'rgb(113, 72, 237)',
+          ...this.dataRowConfig
+        }, {
+          data: ds.account2,
+          backgroundColor: 'rgba(180, 180, 200, 0.1)',
+          ...this.dataRowConfig
+        }
+      ]
+
+      this.chartLabels = new Array(ds.account1.length); 
+    }
   }
 
   chartData: ChartDataSets[];
-  chartLabels: Label[] = [];
+  chartLabels: Label[];
   
   chartOptions: any = {
     responsive: true,
