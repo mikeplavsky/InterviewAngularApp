@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DataSource } from './chart/chart.component';
 
 @Component({
   selector: 'app-root',
