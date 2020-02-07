@@ -1,0 +1,41 @@
+.container {
+    border: 1px solid var(--borders-color);
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    max-width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+.header-title {
+    font-size: 36px;
+}
+
+.stats {
+    margin: 10px 0;
+    display: flex;
+}
+.stats-container + .stats-container {
+    margin-left: 30px;
+}
+.stats-header {
+    font-size: 28px;
+    font-weight: bold;
+}
+.stats-header--accent {
+    color: var(--accent-color);
+}
+.stats-subtitle {
+    color: var(--graytext-color);
+    font-size: 13px;
+}
+
+.chart {
+    width: 100%;
+}
