@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataSource } from 'src/app/chart/chart.component';
 import { Observable } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
+import { DataSource } from 'src/app/components/chart/chart.component';
 
 @Component({
   selector: 'app-widget',
@@ -11,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class WidgetComponent implements OnInit {
 
   $data: Observable<DataSource>;
-  
+
   constructor(public ds: DataService) { }
 
   ngOnInit() {
