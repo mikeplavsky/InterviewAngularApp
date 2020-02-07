@@ -1,4 +1,4 @@
 #!/bin/bash
 
-npm start
+npm run startlab
 
