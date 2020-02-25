@@ -1,1 +1,1 @@
-docker run --rm -v simpleApp:/app/simpleApp -w /app/simpleApp -p 8888:8888 patico/ngapp ./start.sh
+docker run --rm -v $(pwd)/simpleApp:/app/simpleApp -w /app/simpleApp -p 8888:4200 patico/ngapp ng serve
