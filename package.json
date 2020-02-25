@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "startlab": "ng serve --host $PUBLIC_HOSTNAME --port 8888",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
