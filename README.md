@@ -1,6 +1,6 @@
 # Description
 
-This is partly implemented application that dispays hardcoded data.
+`no-code` branch contains partly implemented application that displays hardcoded data.
 
 You have to implement loading data by http and displaying it with **ChartComponent**.  
 Use `assets/account1.json` and `assets/account2.json` files as datasource endpoints (let's assume these are backend responses).
